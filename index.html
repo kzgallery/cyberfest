@@ -43,11 +43,21 @@
 	      <img id="artheism_6" src="assets/artheism/6.jpg">
           <img id="artheism_top" src="assets/artheism/top.jpg">
 
+	      <img id="eternity_4" src="assets/thekeytoeternity/4-min.jpg">
+	      <img id="eternity_6" src="assets/thekeytoeternity/6-min.jpg">
+	      <img id="eternity_1" src="assets/thekeytoeternity/1-min.jpg">
+	      <img id="eternity_9" src="assets/thekeytoeternity/9-min.jpg">
+	      <img id="eternity_5" src="assets/thekeytoeternity/5-min.jpg">
+	      <img id="eternity_8" src="assets/thekeytoeternity/8-min.jpg">
+	      <img id="eternity_2" src="assets/thekeytoeternity/2-min.jpg">
+	      <img id="eternity_7" src="assets/thekeytoeternity/7-min.jpg">
+	      <img id="eternity_3" src="assets/thekeytoeternity/3-min.jpg">
+
           <audio id="sound" src="assets/sound.mp3" preload="auto" loop="true"></audio>
       </a-assets>
 
       <a-camera position="0 0 0" wasd-controls="enabled: false">
-		<a-cursor visible="true" color="blue" opacity="0.5"></a-cursor>
+		<a-cursor visible="true" color="red" opacity="0.5"></a-cursor>
 	  	<!-- <a-entity position="0 0 -10" aim> -->
 
       <a-sound src="#sound" autoplay="true" loop="true" positional="false" position="0 2 -1"></a-sound>
@@ -84,7 +94,22 @@
 				position="7.31 -0.66 6.8"
 				>
 			</a-portal>
+			
+			<a-portal
+				src="#layers_1"	
+				to="layers_loc_1" 
+				position="8.88 4.11 2.04"
+				>
+			</a-portal>
 
+			<a-portal
+				src="#eternity_1"
+				to="eternity_loc_1"
+				position="7.04 4.55 -5.45"
+				>
+			</a-portal>
+
+		<!-- IN MY LIFETIME -->
 		</a-entity>
 		<a-entity id="inmylifetime_loc_1" visible="false">
 			<a-sky material="src: #inmylifetime_1"></a-sky>
@@ -93,6 +118,15 @@
 				src="#inmylifetime_2"
 				to="inmylifetime_loc_2"
 				position="6.62 -2.73 -6.98"
+				>
+			</a-portal>
+
+			<a-portal
+				src="#main"
+				to="loc_main"
+				position="0 10 0"
+				rotation="180 0 0"
+				size=2
 				>
 			</a-portal>
 
@@ -133,6 +167,15 @@
 
 		<a-entity id="landscape_loc_1" visible="false">
 			<a-sky material="src: #landscape_1"></a-sky>
+
+			<a-portal
+				src="#main"
+				to="loc_main"
+				position="0 10 0"
+				rotation="180 0 0"
+				size=2
+				>
+			</a-portal>
 			
 			<a-portal
 				src="#landscape_2"
@@ -233,6 +276,15 @@
 
 		<a-entity id="bubbles_loc_1" visible="false" >
 			<a-sky material="src: #bubbles_1"></a-sky>
+
+			<a-portal
+				src="#main"
+				to="loc_main"
+				position="0 10 0"
+				rotation="180 0 0"
+				size=2
+				>
+			</a-portal>
 			
 			<a-portal
 				src="#bubbles_4"
@@ -298,8 +350,8 @@
 
         </a-entity>
 
-		<!-- LAYERS [TBD legacy portals are always visible 
-      <a-entity id="layers_loc_3" rotation="0 -90 0" visible="false>
+		<!-- LAYERS [TBD legacy portals are always visible  -->
+      <a-entity id="layers_loc_3" rotation="0 -90 0" visible=false>
         <a-sky material="src: #layers_3"></a-sky>
         
 	<a-sphere 
@@ -446,6 +498,15 @@
 
       <a-entity id="layers_loc_1" visible=false scale="0 0 0">
         <a-sky material="src: #layers_1" rotation="0 90 0"></a-sky>
+
+			<a-portal
+				src="#main"
+				to="loc_main"
+				position="0 10 0"
+				size=2.5
+				rotation="180 0 0"
+				>
+			</a-portal>
 	<a-sphere 
 		toid="layers_loc_5" 
 		scale="3 3 3" 
@@ -454,13 +515,21 @@
 		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
 		portal_legacy> 
 	</a-sphere>
-	</entity>
-    -->
-
+	</a-entity>
+    
 	<!-- ARTHEISM -->
 
 		<a-entity id="artheism_loc_top" visible="false">
 			<a-sky material="src: #artheism_top"></a-sky>
+
+			<a-portal
+				src="#main"
+				to="loc_main"
+				position="0 10 0"
+				size=2
+				rotation="180 0 0"
+				>
+			</a-portal>
 
 			<a-portal
 				src="#artheism_4"
@@ -763,6 +832,187 @@
 		    </a-portal>
 
 		</a-entity>
+
+	<!-- THE KEY TO ETERNITY -->
+
+      <a-entity id="eternity_loc_1" visible=false>
+        <a-sky material="src: #eternity_1"></a-sky>
+<a-sphere  toid="eternity_loc_2" scale="3 3 3" position="-1 -6 -64" material="src: #eternity_2" animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" portal_legacy></a-sphere>
+
+			<a-portal
+				src="#main"
+				to="loc_main"
+				position="0 10 0"
+				size=2
+				rotation="180 0 0"
+				>
+			</a-portal>
+        
+	<a-sphere 
+		toid="eternity_loc_3" 
+		scale="3 3 3" 
+		position="64 -6 0" 
+		material="src: #eternity_3" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+
+	<a-sphere 
+		toid="eternity_loc_4" 
+		scale="3 3 3" 
+		position="-64 -6 0" 
+		material="src: #eternity_4" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+
+	<a-sphere 
+		toid="eternity_loc_5" 
+		scale="3 3 3" 
+		position="-1 -6 64" 
+		material="src: #eternity_5" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+
+      </a-entity>
+
+      <a-entity id="eternity_loc_2" visible=false scale="0 0 0">
+        <a-sky material="src: #eternity_2" rotation="0 270 0"></a-sky>
+	<a-sphere 
+		toid="eternity_loc_1" 
+		scale="3 3 3" 
+		position="-1 -6 64" 
+		material="src: #eternity_1" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+
+	<a-sphere 
+		toid="eternity_loc_6" 
+		scale="3 3 3" 
+		position="-1 -6 -64" 
+		material="src: #eternity_6" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+      
+      </a-entity>
+        
+
+      <a-entity id="eternity_loc_3" visible=false scale="0 0 0">
+        <a-sky material="src: #eternity_3" rotation="0 180 0"></a-sky>
+	<a-sphere 
+		toid="eternity_loc_1" 
+		scale="3 3 3" 
+		position="-64 -6 -1" 
+		material="src: #eternity_1" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+
+	<a-sphere 
+		toid="eternity_loc_9" 
+		scale="3 3 3" 
+		position="64 -6 -1" 
+		material="src: #eternity_1" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+      </a-entity>
+
+      <a-entity id="eternity_loc_4" visible=false scale="0 0 0">
+        <a-sky material="src: #eternity_4" rotation="0 0 0"></a-sky>
+	<a-sphere 
+		toid="eternity_loc_1" 
+		scale="3 3 3" 
+		position="64 -6 -1" 
+		material="src: #eternity_1" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+
+	<a-sphere 
+		toid="eternity_loc_8" 
+		scale="3 3 3" 
+		position="-64 -6 -1" 
+		material="src: #eternity_8" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+      </a-entity>
+
+
+      <a-entity id="eternity_loc_5" visible=false scale="0 0 0">
+        <a-sky material="src: #eternity_5" rotation="0 90 0"></a-sky>
+	<a-sphere 
+		toid="eternity_loc_1" 
+		scale="3 3 3" 
+		position="-1 -6 -64" 
+		material="src: #eternity_1" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+
+	<a-sphere 
+		toid="eternity_loc_7" 
+		scale="3 3 3" 
+		position="-1 -6 64" 
+		material="src: #eternity_7" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+
+      </a-entity>
+
+
+      <a-entity id="eternity_loc_6" visible=false scale="0 0 0">
+        <a-sky material="src: #eternity_6" rotation="0 270 0"></a-sky>
+	<a-sphere 
+		toid="eternity_loc_2" 
+		scale="3 3 3" 
+		position="-1 -6 64" 
+		material="src: #eternity_2" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+      </a-entity>
+
+      <a-entity id="eternity_loc_7" visible=false scale="0 0 0">
+        <a-sky material="src: #eternity_7" rotation="0 90 0"></a-sky>
+	<a-sphere 
+		toid="eternity_loc_5" 
+		scale="3 3 3" 
+		position="-1 -6 -64" 
+		material="src: #eternity_2" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+      </a-entity>
+
+      <a-entity id="eternity_loc_8" visible=false scale="0 0 0">
+        <a-sky material="src: #eternity_8" rotation="0 0 0"></a-sky>
+	<a-sphere 
+		toid="eternity_loc_4" 
+		scale="3 3 3" 
+		position="64 -6 -1" 
+		material="src: #eternity_4" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+      </a-entity>
+
+      <a-entity id="eternity_loc_9" visible=false scale="0 0 0">
+        <a-sky material="src: #eternity_9" rotation="0 180 0"></a-sky>
+	<a-sphere 
+		toid="eternity_loc_3" 
+		scale="3 3 3" 
+		position="-64 -6 -1" 
+		material="src: #eternity_3" 
+		animation="property: rotation; to: 0 360 0; loop: true; dur: 10000; easing: linear" 
+		portal_legacy> 
+	</a-sphere>
+      </a-entity>
 
     </a-scene>
   </body>
